@@ -8,24 +8,6 @@
 -->
 <template>
   <div class="header">
-    <div class="desc">
-      <a :href="link">vue-plugin-hiprint</a>
-      <span>使用教程</span>
-    </div>
-    <div class="wechat">
-      <span>微信公众号:</span>
-      <span>不简说</span>
-      <div class="img">
-        <div class="flex-col">
-          <img src="./assets/wechat1.jpg" />
-          <span>加我备注 "start" 进群</span>
-        </div>
-        <div class="flex-col">
-          <img src="./assets/wechat2.jpg" />
-          <span>公众号</span>
-        </div>
-      </div>
-    </div>
     <div class="demos">
       <!-- 遍历按钮列表 -->
       <template v-for="item in btnList" :key="item.demo">
@@ -48,13 +30,6 @@ import start02 from "./start-02/index.vue";
 import start03 from "./start-03/index.vue";
 import start04 from "./start-04/index.vue";
 import start05 from "./start-05/index.vue";
-// 链接
-const host = window.location.host;
-let href = "https://gitee.com/CcSimple/vue-plugin-hiprint";
-if (host && host.includes("github")) {
-  href = "https://github.com/CcSimple/vue-plugin-hiprint";
-}
-const link = ref(href);
 // demo 按钮列表
 const btnList = ref([
   {
@@ -87,7 +62,7 @@ const demos = {
   start05,
 };
 // curDemo 用于存放当前 demo 的 name
-const curDemo = ref(Object.keys(demos)[0]);
+const curDemo = ref(Object.keys(demos)[1]);
 // 切换 demo
 const changeDemo = (item) => {
   curDemo.value = item.demo;

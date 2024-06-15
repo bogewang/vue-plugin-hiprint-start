@@ -18,40 +18,56 @@ export function usePaper(key) {
   // 数据
   const state = reactive({
     curPaper: {
-      type: "A4",
+      type: "二等分",
       width: 210,
-      height: 296.6,
+      height: 140,
     },
     paperTypes: {
-      A3: {
-        width: 420,
-        height: 296.6,
-      },
-      A4: {
+      '一等分': {
         width: 210,
-        height: 296.6,
+        height: 280,
       },
-      A5: {
+      '二等分': {
         width: 210,
-        height: 147.6,
+        height: 140,
       },
-      B3: {
-        width: 500,
-        height: 352.6,
+      '三等分': {
+        width: 210,
+        height: 93,
+      }
+    },
+    paperTypes2: {
+      'A4横向': {
+        width: 297,
+        height: 210,
       },
-      B4: {
-        width: 250,
-        height: 352.6,
+      'A5横向': {
+        width: 210,
+        height: 148,
       },
-      B5: {
-        width: 250,
-        height: 175.6,
+      '二等分横向': {
+        width: 140,
+        height: 210,
+      }
+    },
+    paperTypes3: {
+      '小票(48mm)': {
+        width: 48,
+        height: 160,
       },
+      '小票(80mm)': {
+        width: 80,
+        height: 160,
+      },
+      '小票(110mm)': {
+        width: 110,
+        height: 160,
+      }
     },
     // 自定义纸张
     paperPopVisible: false,
-    paperWidth: "220",
-    paperHeight: "80",
+    paperWidth: "210",
+    paperHeight: "140",
   });
   // 计算属性
   const curPaperType = computed(() => {
