@@ -5,7 +5,7 @@ export default {
       height: 140,
       width: 210,
       paperHeader: 49.5,
-      paperFooter: 780,
+      paperFooter: 300,
       printElements: [
         {
           options: {
@@ -13,7 +13,7 @@ export default {
             top: 10.5,
             height: 27,
             width: 259,
-            title: "HiPrint自定义模块打印插件",
+            title: "XXX公司送货单",
             fontSize: 19,
             fontWeight: "600",
             textAlign: "center",
@@ -60,7 +60,7 @@ export default {
         },
       ],
       paperNumberLeft: 565.5,
-      paperNumberTop: 819,
+      paperNumberTop: 300,
     },
   ],
 };

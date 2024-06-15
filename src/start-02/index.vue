@@ -17,6 +17,22 @@
           </button>
         </template>
       </div>
+
+      <!-- 自定义纸张 -->
+      <button :class="'other' == curPaperType ? 'api' : 'info'" class="auto" @click="showPaperPop">自定义纸张</button>
+      <!-- 自定义纸张 popover -->
+      <div class="popover">
+        <div class="popover-content flex-col" v-show="paperPopVisible">
+          <div style="font-size: 16px; font-weight: bold">设置纸张宽高(mm)</div>
+          <div class="flex-row mt-10">
+            <input class="input" :value="paperWidth" type="number" placeholder="宽(mm)" />
+            <span class="ml-10 mr-10">x</span>
+            <input class="input" :value="paperHeight" type="number" placeholder="高(mm)" />
+          </div>
+          <button class="primary circle-10" style="margin-top: 6px" @click.stop="setPaperOther">确定</button>
+        </div>
+      </div>
+
       <button class="warning circle-10 ml-10" @click.stop="print2">
         直接打印(需要连接客户端)
         <i class="iconfont sv-printer" />
@@ -65,7 +81,7 @@ import { usePaper } from "../hooks/use-paper";
 import { newHiprintPrintTemplate } from "../utils/template-helper";
 
 const TEMPLATE_KEY = getCurrentInstance().type.name; // 存储模板对象的 key
-const { paperTypes, curPaperType, setPaper, } = usePaper(TEMPLATE_KEY);
+const { paperTypes, curPaperType, paperPopVisible, paperWidth, paperHeight, showPaperPop, setPaper, setPaperOther } = usePaper(TEMPLATE_KEY);
 
 // 自定义传入 provider 的参数
 let options = {

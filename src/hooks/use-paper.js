@@ -93,6 +93,8 @@ export function usePaper(key) {
     state.paperPopVisible = false;
   };
   const setPaper = (type, value) => {
+    // eslint-disable-next-line no-debugger
+    debugger;
     try {
       if (Object.keys(state.paperTypes).includes(type)) {
         state.curPaper = { type: type, width: value.width, height: value.height };
@@ -106,6 +108,8 @@ export function usePaper(key) {
     }
   };
   const setPaperOther = () => {
+    // eslint-disable-next-line no-debugger
+    debugger;
     let value = {};
     value.width = state.paperWidth;
     value.height = state.paperHeight;
