@@ -36,34 +36,34 @@ export function usePaper(key) {
         height: 93,
       }
     },
-    paperTypes2: {
-      'A4横向': {
-        width: 297,
-        height: 210,
-      },
-      'A5横向': {
-        width: 210,
-        height: 148,
-      },
-      '二等分横向': {
-        width: 140,
-        height: 210,
-      }
-    },
-    paperTypes3: {
-      '小票(48mm)': {
-        width: 48,
-        height: 160,
-      },
-      '小票(80mm)': {
-        width: 80,
-        height: 160,
-      },
-      '小票(110mm)': {
-        width: 110,
-        height: 160,
-      }
-    },
+    // paperTypes2: {
+    //   'A4横向': {
+    //     width: 297,
+    //     height: 210,
+    //   },
+    //   'A5横向': {
+    //     width: 210,
+    //     height: 148,
+    //   },
+    //   '二等分横向': {
+    //     width: 140,
+    //     height: 210,
+    //   }
+    // },
+    // paperTypes3: {
+    //   '小票(48mm)': {
+    //     width: 48,
+    //     height: 160,
+    //   },
+    //   '小票(80mm)': {
+    //     width: 80,
+    //     height: 160,
+    //   },
+    //   '小票(110mm)': {
+    //     width: 110,
+    //     height: 160,
+    //   }
+    // },
     // 自定义纸张
     paperPopVisible: false,
     paperWidth: "210",
@@ -93,8 +93,6 @@ export function usePaper(key) {
     state.paperPopVisible = false;
   };
   const setPaper = (type, value) => {
-    // eslint-disable-next-line no-debugger
-    debugger;
     try {
       if (Object.keys(state.paperTypes).includes(type)) {
         state.curPaper = { type: type, width: value.width, height: value.height };
@@ -108,8 +106,6 @@ export function usePaper(key) {
     }
   };
   const setPaperOther = () => {
-    // eslint-disable-next-line no-debugger
-    debugger;
     let value = {};
     value.width = state.paperWidth;
     value.height = state.paperHeight;
