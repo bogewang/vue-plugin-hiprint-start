@@ -24,9 +24,9 @@
           <div class="popover-content flex-col" v-show="paperPopVisible">
             <div style="font-size: 16px; font-weight: bold">设置纸张宽高(mm)</div>
             <div class="flex-row mt-10">
-              <input class="input" :value="paperWidth" type="number" placeholder="宽(mm)" />
+              <input class="input" v-model="paperWidth" type="number" placeholder="宽(mm)" />
               <span class="ml-10 mr-10">x</span>
-              <input class="input" :value="paperHeight" type="number" placeholder="高(mm)" />
+              <input class="input" v-model="paperHeight" type="number" placeholder="高(mm)" />
             </div>
             <button class="primary circle-10" style="margin-top: 6px" @click.stop="setPaperOther">确定</button>
           </div>
